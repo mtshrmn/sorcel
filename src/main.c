@@ -9,10 +9,10 @@
 #define SQUARE(r, g, b, a) (_SQUARE(r) + _SQUARE(g) + _SQUARE(b) + _SQUARE(a))
 
 typedef struct {
-  unsigned char a;
-  unsigned char b;
-  unsigned char g;
   unsigned char r;
+  unsigned char g;
+  unsigned char b;
+  unsigned char a;
 } __attribute__((aligned(32))) pixel_t;
 
 static inline uint64_t get_variance(uint32_t *data, unsigned char *mask,
